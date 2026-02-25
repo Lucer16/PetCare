@@ -96,8 +96,10 @@
 
     <div class="hidden md:flex gap-10 text-white font-semibold text-sm uppercase tracking-widest">
         <a href="#servicios" class="hover:text-pet-lime transition-all duration-300 border-b-2 border-transparent hover:border-pet-lime pb-1">Servicios</a>
-        <a href="#sucursales" class="hover:text-pet-lime transition-all duration-300 border-b-2 border-transparent hover:border-pet-lime pb-1">Sucursales</a>
+        <a href="#trayectoria-petcare" class="hover:text-pet-lime transition-all duration-300 border-b-2 border-transparent hover:border-pet-lime pb-1">Trayectoria</a>
         <a href="#opiniones" class="hover:text-pet-lime transition-all duration-300 border-b-2 border-transparent hover:border-pet-lime pb-1">Testimonios</a>
+        <a href="#sucursales" class="hover:text-pet-lime transition-all duration-300 border-b-2 border-transparent hover:border-pet-lime pb-1">Sucursales</a>
+        
     </div>
 
     <div class="flex items-center gap-6">
@@ -292,14 +294,186 @@
                 </div>
             </div>
 
+            <div class="group p-8 rounded-[2rem] bg-slate-50 border border-slate-100 hover:bg-white hover:shadow-2xl hover:shadow-pet-purple/10 transition-all duration-500 hover:-translate-y-2">
+    <div class="text-4xl mb-6 group-hover:scale-110 transition-transform duration-500">🏥</div>
+    <h3 class="text-2xl font-bold text-slate-900 mb-3">Hospitalización</h3>
+    <p class="text-slate-600 mb-4">Monitoreo profesional continuo para pacientes que requieren cuidados especiales o recuperación post-quirúrgica.</p>
+    <div class="flex items-center gap-3">
+        <span class="flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pet-lime opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-pet-lime"></span>
+        </span>
+        <span class="text-xs font-black uppercase tracking-widest text-slate-400">Monitoreo 24h</span>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
     <!--Fin sección de Servicios -->
 
+<!-- Sección de trayectorias-->
+ <section id="trayectoria-petcare" class="trayectoria-container">
+    <style>
+        /* Estilos aislados solo para esta sección */
+        #trayectoria-petcare {
+            background-color: #0f172a; /* Slate 900 */
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .trayectoria-blob {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background-color: #6B2D82; /* Tu Púrpura */
+            filter: blur(120px);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .trayectoria-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .trayectoria-tag {
+            color: #C4D600; /* Tu Lima */
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .trayectoria-titulo {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .trayectoria-resaltado {
+            color: #C4D600; /* Tu Lima */
+            font-style: italic;
+        }
+
+        .trayectoria-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            border-left: 4px solid #6B2D82; /* Tu Púrpura */
+            padding-left: 20px;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            display: block;
+        }
+
+        .stat-text {
+            color: #94a3b8;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .trayectoria-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card-vet {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card-vet:hover {
+            border-color: #C4D600;
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .card-icon { font-size: 30px; margin-bottom: 15px; display: block; }
+        .card-title { font-weight: 700; font-size: 18px; margin-bottom: 10px; display: block; }
+        .card-desc { color: #94a3b8; font-size: 14px; line-height: 1.5; }
+
+        @media (max-width: 768px) {
+            .trayectoria-grid { grid-template-columns: 1fr; }
+            .trayectoria-cards { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <div class="trayectoria-blob"></div>
+
+    <div class="trayectoria-grid">
+        <div class="trayectoria-info">
+            <span class="trayectoria-tag">Compromiso Real</span>
+            <h2 class="trayectoria-titulo">
+                Más de <span class="trayectoria-resaltado">10 años</span> cuidando familias en Panamá Oeste.
+            </h2>
+            <p style="color: #94a3b8; font-size: 18px;">
+                Desde Arraiján hasta Vacamonte, hemos construido un legado de salud animal basado en la confianza y la excelencia médica.
+            </p>
+
+            <div class="trayectoria-stats">
+                <div class="stat-item">
+                    <span class="stat-number">+15k</span>
+                    <span class="stat-text">Mascotas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-text">Atención</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="trayectoria-cards">
+            <div class="card-vet">
+                <span class="card-icon">🏆</span>
+                <span class="card-title">Experiencia</span>
+                <p class="card-desc">Médicos con trayectoria nacional e internacional.</p>
+            </div>
+            <div class="card-vet" style="margin-top: 20px;">
+                <span class="card-icon">🔬</span>
+                <span class="card-title">Diagnóstico</span>
+                <p class="card-desc">Laboratorio y Rayos X de última tecnología.</p>
+            </div>
+            <div class="card-vet">
+                <span class="card-icon">📍</span>
+                <span class="card-title">Local</span>
+                <p class="card-desc">Siempre cerca de ti en los puntos clave del Oeste.</p>
+            </div>
+            <div class="card-vet" style="margin-top: 20px;">
+                <span class="card-icon">💙</span>
+                <span class="card-title">Pasión</span>
+                <p class="card-desc">Tu mascota recibe el trato que le darías en casa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Fin sección de trayectorias-->
+
 
     <!--Sección de Opiniones -->
-    <section id="Opiniones" class="py-24 bg-slate-50">
+    <section id="opiniones" class="py-24 bg-slate-50">
     <div class="max-w-7xl mx-auto px-8">
         
         <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
@@ -411,115 +585,273 @@ Tener una mascota es responsabilidad absoluta. Gracias a todos los doctores que 
     <!--Fin sección de opiniones -->
 
     <!--Sección de sucursales -->
-    <section id="sucursales" class="py-24 relative overflow-hidden bg-pet-purple">
-    <div class="absolute inset-0 opacity-10 pointer-events-none flex flex-wrap gap-20 p-10">
-        <span class="text-6xl grayscale">🐾</span><span class="text-6xl grayscale translate-y-20">🐾</span>
-        <span class="text-6xl grayscale">🐾</span><span class="text-6xl grayscale translate-y-10">🐾</span>
+    <section id="sucursales" class="sucursales-container">
+    <style>
+        #sucursales {
+            background-color: #6B2D82; /* Tu Púrpura */
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .sucursales-bg-icons {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            pointer-events: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            padding: 40px;
+            font-size: 60px;
+        }
+
+        .sucursales-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .sucursales-tag {
+            color: #C4D600; /* Tu Lima */
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .sucursales-titulo {
+            color: white;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            line-height: 1.1;
+        }
+
+        .sucursales-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .card-sucursal {
+            background: white;
+            border-radius: 50px;
+            padding: 10px;
+            transition: all 0.5s ease;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-sucursal:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-inner {
+            border: 2px dashed #f1f5f9;
+            border-radius: 40px;
+            padding: 35px;
+            height: 100%;
+            display: flex;
+            flex-col: column;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            background: rgba(196, 214, 0, 0.2); /* Lima con opacidad */
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .phone-link {
+            text-align: right;
+        }
+
+        .phone-label {
+            display: block;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #94a3b8;
+            letter-spacing: 1px;
+        }
+
+        .phone-num {
+            color: #6B2D82;
+            font-weight: 900;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .phone-num:hover { color: #C4D600; }
+
+        .sucursal-name {
+            color: #0f172a;
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .sucursal-dir {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .horarios-list {
+            flex-grow: 1;
+            margin-bottom: 30px;
+        }
+
+        .horario-row {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .card-sucursal:hover .horario-row:first-child {
+            border-color: rgba(196, 214, 0, 0.5);
+        }
+
+        .dot-status { width: 8px; height: 8px; border-radius: 50%; }
+        .dot-lima { background: #C4D600; box-shadow: 0 0 10px #C4D600; }
+        .dot-purple { background: #6B2D82; }
+
+        .btn-mapa {
+            background: #0f172a;
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-mapa:hover {
+            background: #6B2D82;
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 640px) {
+            .sucursales-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <div class="sucursales-bg-icons">
+        <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
     </div>
 
-    <div class="max-w-7xl mx-auto px-8 relative z-10">
-        <div class="text-center mb-16">
-            <h2 class="text-yellow-500 font-bold uppercase tracking-[0.4em] text-sm mb-4">Nuestra Red</h2>
-            <p class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-                Estamos más <span class="text-pet-lime">cerca</span> de ti
-            </p>
+    <div class="sucursales-header">
+        <span class="sucursales-tag">Nuestra Red</span>
+        <h2 class="sucursales-titulo">Estamos más <span style="color: #C4D600;">cerca</span> de ti</h2>
+    </div>
+
+    <div class="sucursales-grid">
+        <div class="card-sucursal">
+            <div class="card-inner">
+                <div class="card-top">
+                    <div class="icon-box">📍</div>
+                    <div class="phone-link">
+                        <span class="phone-label">Llamar ahora</span>
+                        <a href="tel:63201114" class="phone-num">6320-1114</a>
+                    </div>
+                </div>
+                <h3 class="sucursal-name">Nvo. Chorrillo</h3>
+                <p class="sucursal-dir">Vía principal pasando la plaza Nuevo Chorrillo.</p>
+                <div class="horarios-list">
+                    <div class="horario-row">
+                        <div class="dot-status dot-lima"></div>
+                        <p style="font-size: 14px; font-weight: 700;">Lun - Sáb: <span style="color: #64748b; font-weight: 400;">8am - 10pm</span></p>
+                    </div>
+                    <div class="horario-row">
+                        <div class="dot-status dot-purple"></div>
+                        <p style="font-size: 14px; font-weight: 700;">Dom: <span style="color: #64748b; font-weight: 400;">10am - 4pm</span></p>
+                    </div>
+                </div>
+                <a href="#" class="btn-mapa">Ver en el mapa ➔</a>
+            </div>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8">
-            
-            <div class="group relative bg-white rounded-[3rem] p-2 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
-                <div class="border-2 border-dashed border-slate-100 rounded-[2.5rem] p-8 h-full flex flex-col">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-pet-lime/20 text-3xl rounded-2xl flex items-center justify-center">📍</div>
-                        <div class="text-right">
-                            <span class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Llamar ahora</span>
-                            <a href="tel:63201114" class="text-lg font-black text-pet-purple hover:text-pet-lime transition-colors">6320-1114</a>
-                        </div>
+        <div class="card-sucursal">
+            <div class="card-inner">
+                <div class="card-top">
+                    <div class="icon-box">🏢</div>
+                    <div class="phone-link">
+                        <span class="phone-label">Llamar ahora</span>
+                        <a href="tel:66340198" class="phone-num">6634-0198</a>
                     </div>
-                    
-                    <h3 class="text-3xl font-black text-slate-900 mb-2">Nvo. Chorrillo</h3>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Vía principal pasando la plaza Nuevo Chorrillo.</p>
-                    
-                    <div class="space-y-3 mb-8 flex-grow">
-                        <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-transparent group-hover:border-pet-lime/30 transition-all">
-                            <div class="w-2 h-2 rounded-full bg-pet-lime animate-pulse"></div>
-                            <p class="text-sm font-bold text-slate-700">Lun - Sáb: <span class="font-normal text-slate-500">8am - 10pm</span></p>
-                        </div>
-                        <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl">
-                            <div class="w-2 h-2 rounded-full bg-pet-purple"></div>
-                            <p class="text-sm font-bold text-slate-700">Domingos: <span class="font-normal text-slate-500">10am - 4pm</span></p>
-                        </div>
-                    </div>
-
-                    <a href="#" class="flex items-center justify-center gap-2 w-full py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-pet-purple transition-all group/btn">
-                        <span>Ver en el mapa</span>
-                        <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
                 </div>
-            </div>
-
-            <div class="group relative bg-white rounded-[3rem] p-2 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
-                <div class="border-2 border-dashed border-slate-100 rounded-[2.5rem] p-8 h-full flex flex-col">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-pet-lime/20 text-3xl rounded-2xl flex items-center justify-center">🏢</div>
-                        <div class="text-right">
-                            <span class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Llamar ahora</span>
-                            <a href="tel:66340198" class="text-lg font-black text-pet-purple hover:text-pet-lime transition-colors">6634-0198</a>
-                        </div>
+                <h3 class="sucursal-name">Arraiján</h3>
+                <p class="sucursal-dir">Centro de Arraiján, ubicación estratégica.</p>
+                <div class="horarios-list">
+                    <div class="horario-row">
+                        <div class="dot-status dot-lima"></div>
+                        <p style="font-size: 14px; font-weight: 700;">Lun - Sáb: <span style="color: #64748b; font-weight: 400;">9am - 6pm</span></p>
                     </div>
-                    
-                    <h3 class="text-3xl font-black text-slate-900 mb-2">Arraiján</h3>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Centro de Arraiján, ubicación estratégica para tu mascota.</p>
-                    
-                    <div class="space-y-3 mb-8 flex-grow">
-                        <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-transparent group-hover:border-pet-lime/30 transition-all">
-                            <div class="w-2 h-2 rounded-full bg-pet-lime animate-pulse"></div>
-                            <p class="text-sm font-bold text-slate-700">Lun - Sáb: <span class="font-normal text-slate-500">9am - 6pm</span></p>
-                        </div>
-                        <div class="flex items-center gap-4 bg-slate-100/50 p-4 rounded-2xl">
-                            <div class="w-2 h-2 rounded-full bg-slate-300"></div>
-                            <p class="text-sm font-bold text-slate-400">Domingos: <span class="font-normal">Cerrado</span></p>
-                        </div>
+                    <div class="horario-row">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background: #cbd5e1;"></div>
+                        <p style="font-size: 14px; font-weight: 700; color: #94a3b8;">Domingos: <span style="font-weight: 400;">Cerrado</span></p>
                     </div>
-
-                    <a href="#" class="flex items-center justify-center gap-2 w-full py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-pet-purple transition-all group/btn">
-                        <span>Ver en el mapa</span>
-                        <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
                 </div>
+                <a href="#" class="btn-mapa">Ver en el mapa ➔</a>
             </div>
+        </div>
 
-            <div class="group relative bg-white rounded-[3rem] p-2 transition-all duration-500 hover:-translate-y-2 shadow-2xl">
-                <div class="border-2 border-dashed border-slate-100 rounded-[2.5rem] p-8 h-full flex flex-col">
-                    <div class="flex justify-between items-start mb-8">
-                        <div class="w-16 h-16 bg-pet-lime/20 text-3xl rounded-2xl flex items-center justify-center">⚓</div>
-                        <div class="text-right">
-                            <span class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-1">Llamar ahora</span>
-                            <a href="tel:63201094" class="text-lg font-black text-pet-purple hover:text-pet-lime transition-colors">6320-1094</a>
-                        </div>
+        <div class="card-sucursal">
+            <div class="card-inner">
+                <div class="card-top">
+                    <div class="icon-box">⚓</div>
+                    <div class="phone-link">
+                        <span class="phone-label">Llamar ahora</span>
+                        <a href="tel:63201094" class="phone-num">6320-1094</a>
                     </div>
-                    
-                    <h3 class="text-3xl font-black text-slate-900 mb-2">Vacamonte</h3>
-                    <p class="text-slate-500 text-sm mb-8 leading-relaxed">Vía Puerto de Vacamonte, atención rápida y profesional.</p>
-                    
-                    <div class="space-y-3 mb-8 flex-grow">
-                        <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-transparent group-hover:border-pet-lime/30 transition-all">
-                            <div class="w-2 h-2 rounded-full bg-pet-lime animate-pulse"></div>
-                            <p class="text-sm font-bold text-slate-700">Lun - Sáb: <span class="font-normal text-slate-500">8am - 10pm</span></p>
-                        </div>
-                        <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl">
-                            <div class="w-2 h-2 rounded-full bg-pet-purple"></div>
-                            <p class="text-sm font-bold text-slate-700">Domingos: <span class="font-normal text-slate-500">10am - 4pm</span></p>
-                        </div>
-                    </div>
-
-                    <a href="#" class="flex items-center justify-center gap-2 w-full py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-pet-purple transition-all group/btn">
-                        <span>Ver en el mapa</span>
-                        <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
                 </div>
+                <h3 class="sucursal-name">Vacamonte</h3>
+                <p class="sucursal-dir">Vía Puerto de Vacamonte, atención rápida.</p>
+                <div class="horarios-list">
+                    <div class="horario-row">
+                        <div class="dot-status dot-lima"></div>
+                        <p style="font-size: 14px; font-weight: 700;">Lun - Sáb: <span style="color: #64748b; font-weight: 400;">8am - 10pm</span></p>
+                    </div>
+                    <div class="horario-row">
+                        <div class="dot-status dot-purple"></div>
+                        <p style="font-size: 14px; font-weight: 700;">Dom: <span style="color: #64748b; font-weight: 400;">10am - 4pm</span></p>
+                    </div>
+                </div>
+                <a href="#" class="btn-mapa">Ver en el mapa ➔</a>
             </div>
-
         </div>
     </div>
 </section>
@@ -656,14 +988,14 @@ Tener una mascota es responsabilidad absoluta. Gracias a todos los doctores que 
         <div class="mt-20 pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
     
     <div class="order-2 md:order-1">
-        <p class="text-slate-400 text-sm flex items-center gap-2">
+        <p class="px-20 text-slate-400 text-sm flex items-center gap-2">
             Hecho con 
             <span class="inline-flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-500 animate-pulse fill-current" viewBox="0 0 24 24">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                 </svg>
             </span>
-            por <span class="font-black text-white tracking-tighter hover:text-pet-lime transition-colors cursor-default"><a href="https://wecreatebylucero.com" target="_blank">Wecreate</a></span>
+            por <span class="text-white tracking-tighter hover:text-pet-lime transition-colors cursor-default"><a href="https://wecreatebylucero.com" target="_blank">Wecreate</a></span>
         </p>
     </div>
 
